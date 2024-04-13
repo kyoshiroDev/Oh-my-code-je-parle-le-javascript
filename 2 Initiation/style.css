@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+html {
+	font-size: 62.5%; /* 1rem = 10px*/
+}
+body {
+	font-size: 1.4rem; /* soit 14px*/
+	font-family: arial;
+	color: white;
+}
+.container {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	justify-content: center;
+	align-items: center;
+	background-color: #1e2337;
+}
+
+h1 {
+	color: red;
+}
+
+#btn-red {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: red;
+	animation-name: rouge;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}
+
+#btn-blue {
+  position: relative;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: blue;
+	animation-name: bleu;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+#btn-green{
+  position: relative;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: green;
+	animation-name: vert;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rouge {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		left: 200px;
+		top: 0px;
+	}
+	50% {
+		left: 200px;
+		top: 200px;
+	}
+	75% {
+		left: 0px;
+		top: 200px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+@keyframes bleu {
+	0% {
+		left: 0px;
+		top: 0px;
+	}
+	25% {
+		left: 0px;
+		top: 200px;
+	}
+	50% {
+		left: 200px;
+		top: 200px;
+	}
+	75% {
+		left: 200px;
+		top: 0px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
+
+@keyframes vert {
+	0% {
+		left: -10px;
+		top: 0px;
+	}
+	25% {
+		left: 200px;
+		top: 200px;
+	}
+	50% {
+		left: 0px;
+		top: 200px;
+	}
+	75% {
+		left: 200px;
+		top: 0px;
+	}
+	100% {
+		left: 0px;
+		top: 0px;
+	}
+}
