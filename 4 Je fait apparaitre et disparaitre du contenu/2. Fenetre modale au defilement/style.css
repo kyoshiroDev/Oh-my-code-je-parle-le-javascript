@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%; /* 1rem = 10px*/
+}
+
+body {
+    font-size: 1.4rem; /* soit 14px*/
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1E2337;
+}
+
+.part2 {
+    background: orange;
+}
+
+.part3 {
+    background: orangered;
+}
+
+.banniere-titre {
+    margin-bottom: 1rem;
+}
+
+/*STYLE MENU DESKTOP*/
+.navbar-desktop {
+    height: 8rem; /*80pixels*/
+    line-height: 8rem; /*centre verticalement*/
+    text-align: center; /*centre horizontalement*/
+}
+
+/* style des liens*/
+.navbar-desktop a {
+    padding: 3rem;
+}
+
+/*STYLE MENU MOBILE*/
+.navbar-mobile {
+    display: none;
+}
+
+.navbar-mobile i {
+    position: fixed;
+    z-index: 9999;
+    top: 9px;
+    right: 15px;
+    font-size: 3rem;
+    color: white;
+}
+
+/*Modal*/
+.modal-container {
+    height: 100vh; /*Couvre toute la hauteur la page*/
+    width: 100%; /*Couvre toute largeur la page*/
+    position: fixed; /*Se place au-dessus*/
+    top: 0;
+    left: 0;
+    background-color: rgba(136, 222, 136, 0.8);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-details {
+    background-color: white;
+    width: 50%;
+    text-align: center;
+    position: relative; /*Pour positionner l'icône*/
+    padding: 3rem;
+    color: #1e2337;
+}
+
+.modal-details i {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    font-size: 2rem;
+    padding: 1rem;
+    color: grey;
+}
+
+/*Le titre*/
+.modal-titre {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+/*Le code*/
+.code {
+    display: none;
+    background: black;
+    color: white;
+    font-family: monospace;
+    padding: 1rem;
+}
+
+/*Le bouton*/
+.btn-success {
+    height: 4rem;
+    background-color: rgb(231, 171, 61);
+    color: white;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+}
+
+.modal {
+    transition: top 0.9s;
+    background-color: #F92995;
+    height: 100vh;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.change-modal {
+    top: 0
+}
+
+/* NavBar Mobile */
+.navbar-mobile .navbar-mobile-list {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar-mobile .navbar-mobile-list a {
+    font-size: 5rem;
+    font-weight: 800;
+    color: #1E2337;
+    padding: 2rem;
+}
+
+/*Media queries*/
+@media screen and (max-width: 700px) {
+    .navbar-desktop {
+        display: none;
+    }
+
+    .navbar-mobile {
+        display: block;
+    }
+}
